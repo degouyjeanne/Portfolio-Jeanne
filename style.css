@@ -1,52 +1,59 @@
+/* Container principal de la bannière */
 .banniere {
-    position: relative;
-    width: 100%;
-    height: 300px; /* hauteur de la bannière */
-    overflow: hidden;
-    border-radius: 10px;
-    margin-bottom: 40px;
+    position: relative; /* permet aux éléments à l'intérieur (comme la vidéo) d'être positionnés par rapport à cette div */
+    width: 100%; /* prend toute la largeur de l'écran */
+    height: 300px; /* fixe la hauteur à 300px */
+    overflow: hidden; /* tout ce qui dépasse de la div sera caché */
+    border-radius: 10px; /* arrondit les coins de la bannière */
+    margin-bottom: 40px; /* espace en dessous pour séparer du reste du contenu */
 }
 
+/* Vidéo en fond de la bannière */
 .video-bg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    object-fit: cover;
+    position: absolute; /* positionne la vidéo par rapport à .banniere */
+    top: 50%; /* centre verticalement la vidéo */
+    left: 50%; /* centre horizontalement la vidéo */
+    min-width: 100%; /* la vidéo doit couvrir au moins toute la largeur */
+    min-height: 100%; /* la vidéo doit couvrir au moins toute la hauteur */
+    width: auto; /* ajuste automatiquement la largeur pour garder les proportions */
+    height: auto; /* ajuste automatiquement la hauteur pour garder les proportions */
+    transform: translate(-50%, -50%); /* corrige le positionnement pour que le centre soit exactement au milieu */
+    z-index: 1; /* met la vidéo derrière le texte */
+    object-fit: cover; /* fait en sorte que la vidéo remplisse tout l’espace sans être déformée */
 }
 
+/* Texte affiché au-dessus de la vidéo */
 .contenu-banniere {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    color: white;
-    padding: 50px 20px;
+    position: relative; /* nécessaire pour que z-index fonctionne */
+    z-index: 2; /* place le texte au-dessus de la vidéo */
+    text-align: center; /* centre le texte horizontalement */
+    color: white; /* couleur blanche pour bien ressortir sur la vidéo */
+    padding: 50px 20px; /* espace autour du texte pour qu'il ne touche pas les bords */
 }
 
+/* Titre dans la bannière */
 .contenu-banniere h1 {
-    font-size: 2.5rem;
-    margin: 0;
+    font-size: 2.5rem; /* taille du titre */
+    margin: 0; /* supprime les marges par défaut pour que le texte reste bien centré */
 }
 
+/* Paragraphe dans la bannière */
 .contenu-banniere p {
-    font-size: 1.2rem;
-    margin-top: 10px;
+    font-size: 1.2rem; /* légèrement plus petit que le titre */
+    margin-top: 10px; /* petit espace au-dessus pour ne pas coller au titre */
 }
+
+/* Titres de sections principales */
 .title {
-    color: pink;
+    color: pink; /* couleur rose pour ces titres */
 }
 
+/* Style de tous les paragraphes du site */
 p {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Arial', sans-serif; /* texte en Arial, sinon police sans-serif */
 }
 
-}
+/* Titres des stages ou expériences */
 .stagetitle{
-    color: pink;
-}
+    color: pink; /* rose pour rester cohérent avec les autres titres */
 }
