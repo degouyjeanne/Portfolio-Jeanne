@@ -1,52 +1,106 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base générale */
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    background: #faf7f9;
+    color: #2b2b2b;
+    padding: 30px;
+}
+
+/* Bannière */
 .banniere {
     position: relative;
     width: 100%;
-    height: 300px; /* hauteur de la bannière */
+    height: 300px;
     overflow: hidden;
-    border-radius: 10px;
-    margin-bottom: 40px;
+    border-radius: 18px;
+    margin-bottom: 45px;
+    box-shadow: 0 12px 35px rgba(214, 108, 160, 0.35);
 }
 
+/* Vidéo */
 .video-bg {
     position: absolute;
     top: 50%;
     left: 50%;
     min-width: 100%;
     min-height: 100%;
-    width: auto;
-    height: auto;
     transform: translate(-50%, -50%);
-    z-index: 1;
     object-fit: cover;
+    z-index: 1;
 }
 
+/* Overlay bannière */
 .contenu-banniere {
     position: relative;
     z-index: 2;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.4);
     text-align: center;
-    color: white;
-    padding: 50px 20px;
 }
 
 .contenu-banniere h1 {
-    font-size: 2.5rem;
-    margin: 0;
+    color: #ffffff;
+    font-size: 2.6rem;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
-
-.contenu-banniere p {
-    font-size: 1.2rem;
-    margin-top: 10px;
-}
+/* Titres sections */
 .title {
-    color: pink;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #d66ca0;
+    margin-bottom: 18px;
+    position: relative;
 }
 
+/* Trait stylé sous titres */
+.title::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 4px;
+    background: linear-gradient(90deg, #d66ca0, #ffb6d9);
+    border-radius: 10px;
+    margin-top: 8px;
+}
+
+/* Cartes texte */
 p {
-    font-family: 'Arial', sans-serif;
+    background: #ffffff;
+    padding: 20px 25px;
+    border-radius: 16px;
+    margin-bottom: 30px;
+    line-height: 1.7;
+    box-shadow: 0 8px 25px rgba(214, 108, 160, 0.25);
 }
 
+/* Séparateur */
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        #d66ca0,
+        transparent
+    );
+    margin: 45px 0;
 }
-.stagetitle{
-    color: pink;
-}
+
+/* Titres expériences */
+.stagetitle {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #d66ca0;
+    margin-bottom: 12px;
 }
